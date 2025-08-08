@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infográfico: Tecnologia a seu Favor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .icon-card {
+            background-color: #BFEAF5;
+            color: #004AAD;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .icon-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#004AAD]">Tecnologia a seu Favor</h1>
+            <p class="text-lg md:text-xl text-[#008DDA] mt-2">Um guia para uma vida mais conectada, segura e independente.</p>
+        </header>
+
+        <main>
+            <section class="mb-16">
+                <div class="bg-white rounded-lg shadow-md p-6 md:p-8 text-center">
+                    <h2 class="text-3xl font-bold text-[#004AAD] mb-4">O que é Tecnologia Assistiva?</h2>
+                    <p class="text-lg mb-6">Pense nas ferramentas que já facilitam sua vida: óculos, bengalas, controle remoto. Tecnologia Assistiva é qualquer recurso ou serviço que ajuda pessoas a realizar tarefas e ter mais autonomia. Hoje, muitas dessas ajudas estão no seu celular e em outros dispositivos inteligentes.</p>
+                    <div class="flex justify-center items-center space-x-4 md:space-x-8 text-2xl md:text-4xl">
+                        <span title="Óculos">👓</span>
+                        <span class="text-[#008DDA] font-bold">+</span>
+                        <span title="Bengala">🦯</span>
+                        <span class="text-[#008DDA] font-bold">+</span>
+                        <span title="Controle Remoto">📺</span>
+                        <span class="text-[#008DDA] font-bold">=</span>
+                        <span title="Smartphone">📱</span>
+                        <span class="text-[#008DDA] font-bold">+</span>
+                        <span title="Smartwatch">⌚</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-[#004AAD] text-center mb-8">Conectando Gerações</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-center mb-4 text-[#004AAD]">Principais Usos do Smartphone por Idosos</h3>
+                        <p class="text-center text-gray-600 mb-4">A tecnologia é, antes de tudo, uma ponte para manter laços. A principal razão para o uso de smartphones é a comunicação com a família, seguida pela busca de informações e acesso a serviços.</p>
+                        <div class="chart-container h-64 md:h-80">
+                            <canvas id="comunicacaoChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                        <h3 class="text-xl font-bold text-[#004AAD] mb-4">Inclusão para Todos: Hand Talk</h3>
+                        <p class="text-gray-600 mb-4">A tecnologia também quebra barreiras. Aplicativos como o Hand Talk traduzem voz e texto para a Língua Brasileira de Sinais (Libras), facilitando a comunicação com a comunidade surda.</p>
+                        <div class="bg-[#40A2E3] text-white rounded-full w-32 h-32 mx-auto flex items-center justify-center text-6xl">
+                            🤟
+                        </div>
+                        <p class="mt-4 font-semibold text-[#004AAD]">Comunicação sem limites.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-[#004AAD] text-center mb-8">Uma Casa Mais Segura e Inteligente</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-6 md:col-span-2">
+                        <h3 class="text-xl font-bold text-center mb-4 text-[#004AAD]">Como Funciona a Detecção de Queda?</h3>
+                        <p class="text-center text-gray-600 mb-6">Relógios inteligentes podem ser verdadeiros anjos da guarda. Se uma queda brusca é detectada, ele inicia um processo automático para pedir ajuda, trazendo tranquilidade para quem mora sozinho.</p>
+                        <div class="flex flex-col md:flex-row justify-around items-center text-center space-y-4 md:space-y-0">
+                            <div class="flex flex-col items-center">
+                                <div class="bg-[#BFEAF5] text-[#004AAD] rounded-full w-20 h-20 flex items-center justify-center text-4xl mb-2">1</div>
+                                <p class="font-semibold">Queda Detectada</p>
+                                <p class="text-sm text-gray-500">O relógio sente o impacto.</p>
+                            </div>
+                            <div class="text-4xl text-[#008DDA] hidden md:block">→</div>
+                             <div class="text-4xl text-[#008DDA] md:hidden">↓</div>
+                            <div class="flex flex-col items-center">
+                                <div class="bg-[#40A2E3] text-white rounded-full w-20 h-20 flex items-center justify-center text-4xl mb-2">2</div>
+                                <p class="font-semibold">Alerta no Pulso</p>
+                                <p class="text-sm text-gray-500">Pergunta se você está bem.</p>
+                            </div>
+                             <div class="text-4xl text-[#008DDA] hidden md:block">→</div>
+                             <div class="text-4xl text-[#008DDA] md:hidden">↓</div>
+                            <div class="flex flex-col items-center">
+                                <div class="bg-[#008DDA] text-white rounded-full w-20 h-20 flex items-center justify-center text-4xl mb-2">3</div>
+                                <p class="font-semibold">Ligação de Emergência</p>
+                                <p class="text-sm text-gray-500">Liga para a família ou ambulância.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="mb-16">
+                 <h2 class="text-3xl font-bold text-[#004AAD] text-center mb-8">Saúde e Mobilidade na Palma da Mão</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-bold text-center mb-4 text-[#004AAD]">Crescimento do Acesso a Serviços Digitais</h3>
+                        <p class="text-center text-gray-600 mb-4">A conveniência de pedir transporte ou fazer compras pelo celular tem crescido. Isso representa mais autonomia e acesso a serviços essenciais sem precisar sair de casa.</p>
+                        <div class="chart-container h-64 md:h-80">
+                            <canvas id="servicosChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                         <h3 class="text-xl font-bold text-center mb-4 text-[#004AAD]">Ferramentas para o Cuidado Diário</h3>
+                         <p class="text-center text-gray-600 mb-6">Além dos aplicativos, existem diversos dispositivos que ajudam a gerenciar a saúde de forma simples e eficaz.</p>
+                         <div class="space-y-4">
+                            <div class="icon-card flex items-center p-4 rounded-lg">
+                                <span class="text-3xl mr-4">💊</span>
+                                <div>
+                                    <h4 class="font-bold">Dispensadores de Remédios</h4>
+                                    <p class="text-sm">Alertam e separam a dose certa na hora certa.</p>
+                                </div>
+                            </div>
+                            <div class="icon-card flex items-center p-4 rounded-lg">
+                                <span class="text-3xl mr-4">❤️</span>
+                                <div>
+                                    <h4 class="font-bold">Monitores de Pressão</h4>
+                                    <p class="text-sm">Registram o histórico no celular para levar ao médico.</p>
+                                </div>
+                            </div>
+                             <div class="icon-card flex items-center p-4 rounded-lg">
+                                <span class="text-3xl mr-4">🔑</span>
+                                <div>
+                                    <h4 class="font-bold">Localizadores de Objetos</h4>
+                                    <p class="text-sm">Ajudam a encontrar chaves e carteiras perdidas.</p>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="text-center mt-16 pt-8 border-t-2 border-[#BFEAF5]">
+                <h2 class="text-3xl font-bold text-[#004AAD] mb-4">Pronto para Começar?</h2>
+                <p class="text-lg text-gray-600 mb-6">A tecnologia é sua aliada. Dê o primeiro passo hoje mesmo!</p>
+                <div class="bg-white rounded-lg shadow-md p-6 max-w-md mx-auto">
+                    <ul class="text-left space-y-2">
+                        <li class="flex items-start"><span class="text-[#008DDA] mr-2">✓</span><span>Peça para um familiar mostrar como fazer uma videochamada.</span></li>
+                        <li class="flex items-start"><span class="text-[#008DDA] mr-2">✓</span><span>Tente usar o comando de voz: "Ok Google, qual a previsão do tempo?".</span></li>
+                        <li class="flex items-start"><span class="text-[#008DDA] mr-2">✓</span><span>Explore os aplicativos no seu celular. A curiosidade é o melhor guia!</span></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrapLabel = (label, maxWidth) => {
+                if (label.length <= maxWidth) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + word).length > maxWidth) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            };
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                }
+                return label;
+            };
+
+            const sharedChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: {
+                                family: 'Inter'
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        },
+                        titleFont: { family: 'Inter' },
+                        bodyFont: { family: 'Inter' }
+                    }
+                }
+            };
+            
+            const comunicacaoCtx = document.getElementById('comunicacaoChart').getContext('2d');
+            new Chart(comunicacaoCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Falar com a Família', 'Acessar Notícias', 'Serviços (Bancos, Compras)', 'Entretenimento'],
+                    datasets: [{
+                        label: 'Uso do Smartphone',
+                        data: [55, 20, 15, 10],
+                        backgroundColor: ['#004AAD', '#008DDA', '#40A2E3', '#BFEAF5'],
+                        borderColor: '#FFFFFF',
+                        borderWidth: 2
+                    }]
+                },
+                options: sharedChartOptions
+            });
+
+            const servicosCtx = document.getElementById('servicosChart').getContext('2d');
+            new Chart(servicosCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Apps de Transporte', wrapLabel('Apps de Entregas (Comida, Farmácia)', 16), 'Telemedicina'],
+                    datasets: [{
+                        label: 'Adoção de Serviços (%)',
+                        data: [45, 65, 30],
+                        backgroundColor: ['#004AAD', '#008DDA', '#40A2E3'],
+                        borderRadius: 5
+                    }]
+                },
+                options: {
+                    ...sharedChartOptions,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%'
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                           display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: tooltipTitleCallback
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
